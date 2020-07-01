@@ -1,5 +1,5 @@
-public class FindMaximumSubarray2 {
-    public static double[] array = {13, -3, -25,20,-3,-16,-23,18,20,-7,12,-5,-22,15,-4,7};
+class FindMaximumSubarray2 {
+    public static double[] array = {-1, 1, 2 ,3};
 
     public static double[] findMaxCrossingSubarray(double[] array, int low, int mid, int high){
         double sum = 0;
@@ -7,10 +7,10 @@ public class FindMaximumSubarray2 {
 
         double left_sum = Double.NEGATIVE_INFINITY;
         int max_left = mid;
-        for(int i = mid; i >= low; i--){   // Очень важно в левой части начинать бежать с mid, а в правой с mid + 1, не наоборот. Из-за того, что
+        for(int i = mid; i >= low; i--){   // Очень важно в левой части начинать бежать с mid, а в правой с mid + 1, (не mid - 1 и mid). Из-за того,что
             sum = sum + array[i];	   // при подсчете серединного индекса, он получается смещенным к левой части в случае четного числа элементов
-            if(sum > left_sum){		   // массива.										
-                left_sum = sum;
+            if(sum > left_sum){		   // массива. И для двухэлементного массива с индексами 0 1, mid = 0 и mid - 1 уже выходит за пределы массива
+                left_sum = sum;        // И следовательно left_sum = Negative_Infinity
                 max_left = i;
             }
         }
@@ -44,7 +44,7 @@ public class FindMaximumSubarray2 {
         resultLeft = findMaximumSubarray(array ,low, mid, resultLeft, resultRight);
         resultRight = findMaximumSubarray(array, mid + 1, high, resultLeft, resultRight);
         double[] resultCross = findMaxCrossingSubarray(array, low, mid, high);
-
+        int a = 4;
         if(resultLeft[2] >= resultCross[2] && resultLeft[2] >= resultRight[2]){
             return resultLeft;
         }
@@ -62,6 +62,4 @@ public class FindMaximumSubarray2 {
         double[] result = findMaximumSubarray(array, 0, array.length - 1,resultLeft, resultRight);
         System.out.println(result[0] + " " + result[1] + " " + result[2]);
     }
-
-
 }
