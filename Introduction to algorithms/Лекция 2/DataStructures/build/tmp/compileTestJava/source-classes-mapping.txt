@@ -1,2 +1,4 @@
 ru/nsd/DynamicArrayTest.java
  ru.nsd.DynamicArrayTest
+ru/nsd/StackOnArrayTest.java
+ ru.nsd.StackOnArrayTest

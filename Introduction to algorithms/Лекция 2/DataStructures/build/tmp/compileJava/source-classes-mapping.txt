@@ -1,2 +1,4 @@
 ru/nsd/DynamicArray.java
  ru.nsd.DynamicArray
+ru/nsd/StackOnArray.java
+ ru.nsd.StackOnArray
