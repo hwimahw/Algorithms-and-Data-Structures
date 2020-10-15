@@ -1,4 +1,9 @@
-ru/nsd/DynamicArray.java
- ru.nsd.DynamicArray
 ru/nsd/StackOnArray.java
  ru.nsd.StackOnArray
+ru/nsd/DynamicArray.java
+ ru.nsd.DynamicArray
+ru/nsd/QueueOnArray.java
+ ru.nsd.QueueOnArray
+ru/nsd/SinglyLinkedList.java
+ ru.nsd.SinglyLinkedList
+ ru.nsd.SinglyLinkedList$Node

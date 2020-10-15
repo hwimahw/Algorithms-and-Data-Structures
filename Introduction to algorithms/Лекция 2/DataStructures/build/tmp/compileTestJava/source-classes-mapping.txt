@@ -2,3 +2,7 @@ ru/nsd/DynamicArrayTest.java
  ru.nsd.DynamicArrayTest
 ru/nsd/StackOnArrayTest.java
  ru.nsd.StackOnArrayTest
+ru/nsd/QueueOnArrayTest.java
+ ru.nsd.QueueOnArrayTest
+ru/nsd/SinglyLinkedListTest.java
+ ru.nsd.SinglyLinkedListTest
